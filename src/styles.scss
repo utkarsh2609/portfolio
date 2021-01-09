@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import "~@angular/material/theming";
@@ -28,7 +29,7 @@ $harry-potter-theme: mat-light-theme(
             primary: $harry-potter-primary,
             accent: $harry-potter-accent,
             warn: $harry-potter-warn,
-        ),
+        )
     )
 );
 
@@ -36,6 +37,26 @@ $harry-potter-theme: mat-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($harry-potter-theme);
+
+// typography
+$portfolio-typography: mat-typography-config(
+  $font-family:   '"Cinzel", serif',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(56px, 56px, 600),
+  $display-2:     mat-typography-level(45px, 48px, 400),
+  $display-1:     mat-typography-level(34px, 40px, 600),
+  $headline:      mat-typography-level(24px, 32px, 600),
+  $title:         mat-typography-level(20px, 32px, 600),
+  $subheading-2:  mat-typography-level(16px, 22px, 600),
+  $subheading-1:  mat-typography-level(15px, 24px, 600),
+  $body-2:        mat-typography-level(14px, 24px, 600),
+  $body-1:        mat-typography-level(14px, 30px, 600),
+  $caption:       mat-typography-level(12px, 20px, 600),
+  $button:        mat-typography-level(10px, 14px, 800),
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+@include angular-material-typography($portfolio-typography);
 
 // Define an alternate dark theme.
 $dark-primary: mat-palette($md-batprimary);
@@ -68,16 +89,10 @@ body {
 body {
     margin: 0;
     font-family: "Cinzel", serif !important;
-}
-
-body {
-    position: absolute;
-    width: 1440px;
-    height: 1024px;
-
-    background: linear-gradient(242.84deg, #012E40 1.38%, #0378A6 98.69%);;
-    backdrop-filter: blur(4px);
-    /* Note: backdrop-filter has minimal browser support */
-
-    border-radius: 30px;
+    background-color: #f7f7f7;
+    background-image: url(./assets/backgrounds/Rose-Petals.svg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    // font-family: 'Cinzel', serif;
 }
