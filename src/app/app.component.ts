@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { OverlayContainer} from '@angular/cdk/overlay';
+
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'portfolio';
-  // constructor(private readonly themeService: ThemeService) {}
+  constructor(public overlayContainer: OverlayContainer) {}
+  @HostBinding('class') componentCssClass: string = '';
 
   ngOnInit() {
     // this.themeService.setTheme("deeppurple-amber");
+  }
+  onSetTheme(theme: string) {
+    this.overlayContainer.getContainerElement().classList.add(theme);
+    this.componentCssClass = theme;
   }
 }

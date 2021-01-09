@@ -69,3 +69,15 @@ body {
     margin: 0;
     font-family: "Cinzel", serif !important;
 }
+
+body {
+    position: absolute;
+    width: 1440px;
+    height: 1024px;
+
+    background: linear-gradient(242.84deg, #012E40 1.38%, #0378A6 98.69%);;
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 30px;
+}
