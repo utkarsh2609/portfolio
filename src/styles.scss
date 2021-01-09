@@ -36,7 +36,9 @@ $harry-potter-theme: mat-light-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($harry-potter-theme);
+.harry-potter-theme {
+    @include angular-material-theme($harry-potter-theme);
+}
 
 // typography
 $portfolio-typography: mat-typography-config(
@@ -68,7 +70,7 @@ $dark-theme: mat-dark-theme(
             primary: $dark-primary,
             accent: $dark-accent,
             warn: $dark-warn,
-        ),
+            )
     )
 );
 
@@ -89,10 +91,13 @@ body {
 body {
     margin: 0;
     font-family: "Cinzel", serif !important;
-    background-color: #f7f7f7;
-    background-image: url(./assets/backgrounds/Rose-Petals.svg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    // font-family: 'Cinzel', serif;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none;
 }

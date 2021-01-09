@@ -3,5 +3,15 @@
     box-shadow: 0 0 15px 5px rgb(0 0 0);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    .theme-selector {
+        width: 170px;
+    }
+}
+
+.theme-image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }

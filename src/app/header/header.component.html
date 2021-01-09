@@ -1,3 +1,13 @@
 <mat-toolbar color='primary' class="portfolio-header">
   <span>My Application</span>
+  <div class="theme-selector">
+      <mat-select (selectionChange)="onSetTheme($event.value)" [(ngModel)]='selectedTheme'>
+        <mat-option *ngFor="let theme of themes" [value]="theme.value">
+          <div class="d-flex justify-content-between align-items-center">
+            <img [src]="theme.image" alt="theme image" class="theme-image">
+            {{theme.name}}
+          </div>
+        </mat-option>
+      </mat-select>
+  </div>
 </mat-toolbar>
