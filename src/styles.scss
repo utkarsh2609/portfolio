@@ -28,23 +28,17 @@ $harry-potter-theme: mat-light-theme(
         color: (
             primary: $harry-potter-primary,
             accent: $harry-potter-accent,
-            warn: $harry-potter-warn,
-        ),
+            warn: $harry-potter-warn
+        )
     )
 );
+// $harry-potter-theme: create-wonky-theme($harry-potter-primary, $harry-potter-accent, $harry-potter-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 .harry-potter-theme {
     @include angular-material-theme($harry-potter-theme);
-
-    // body {
-    //     overflow-x: hidden;
-    //     background: url("./assets/backgrounds/home-harry.jpg");
-    //     height: 100vh;
-    //     width: 100vw;
-    // }
 }
 
 // typography
@@ -68,7 +62,7 @@ $portfolio-typography: mat-typography-config(
 @include angular-material-typography($portfolio-typography);
 
 // Define an alternate dark theme.
-$dark-primary: mat-palette($md-batprimary);
+$dark-primary: mat-palette($md-batprimary, 100, 300, 700);
 $dark-accent: mat-palette($md-batsecond);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme(
@@ -76,7 +70,7 @@ $dark-theme: mat-dark-theme(
         color: (
             primary: $dark-primary,
             accent: $dark-accent,
-            warn: $dark-warn,
+            warn: $dark-warn
         ),
     )
 );
@@ -86,6 +80,8 @@ $dark-theme: mat-dark-theme(
 // `.batman-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 .batman-dark-theme {
     @include angular-material-color($dark-theme);
+    // color: mat-color($dark-primary) !important;
+    // color: #fff !important;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -98,14 +94,10 @@ body {
 body {
     margin: 0;
     font-family: "Cinzel", serif !important;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
-    // overflow-x: hidden;
-        background: url("./assets/backgrounds/home-harry.jpg");
-        // height: 100vh;
-        // width: 100vw;
 }
 
 *:focus,
@@ -113,13 +105,33 @@ body {
     outline: none;
 }
 
+.harry-background {
+    background: url("./assets/backgrounds/home-harry.jpg");
+}
+
+.batman-background {
+    background: url("./assets/backgrounds/home-bat.jpg");
+    background-size: cover;
+}
+
 .harry-potter-card {
-    background: rgb(174 0 1 / 77%);;
+    background: rgb(174 0 1 / 77%);
     color: black;
+}
+
+.batman-card {
+    background: #012e4070;
+    color: #04b2d9;
 }
 
 .harry-potter-title {
     background-color: #eeba30;
     color: #ae0001;
+    font-weight: 800;
+}
+
+.batman-title {
+    background-color: #03080D;
+    color: #025e73;
     font-weight: 800;
 }

@@ -1,7 +1,7 @@
 export class Constants {
     public static themeNames = [
-        { name: 'Batman', value: 'batman-dark-theme', image: '../assets/images/theme-select/bat-removebg-preview.png' },
-        { name: 'Harry Potter', value: 'harry-potter-theme', image: '../assets/images/theme-select/harry-removebg-preview.png' }
+        { name: 'Batman', value: 'batman-dark-theme', image: '../assets/images/theme-select/bat-removebg-preview.png', bodyClass: 'batman-background' },
+        { name: 'Harry Potter', value: 'harry-potter-theme', image: '../assets/images/theme-select/harry-removebg-preview.png', bodyClass: 'harry-background' }
     ];
 
     public static themeImages = {
