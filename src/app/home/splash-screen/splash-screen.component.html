@@ -1,1 +1,35 @@
-<p>splash-screen works!</p>
+<!-- <div class="col-md-12">
+    <img [src]="homePagePicture" class="img-fluid rounded float-start home-image" alt="home theme image">
+</div> -->
+<div class="row container-fluid d-flex align-items-center flex-wrap-reverse">
+    <div class="col-md-4">
+        <img [src]="homePagePicture" class="img-fluid" alt="...">
+    </div>
+    <div class="col-md-8 mt-5">
+        <div class="harry-potter-title">
+            <p class="h1">Utkarsh Awasthi</p>
+        </div>
+        <mat-card class='harry-potter-card'>
+            <mat-card-title>
+                <h1> {{homePageTitle}} </h1>
+            </mat-card-title>
+            <mat-card-content>
+                <!-- <p class="h1">h1. Bootstrap heading</p>
+<p class="h2">h2. Bootstrap heading</p>
+<p class="h3">h3. Bootstrap heading</p>
+<p class="h4">h4. Bootstrap heading</p>
+<p class="h5">h5. Bootstrap heading</p>
+<p class="h6">h6. Bootstrap heading</p> -->
+                <h4>
+                    {{homePageBody}}
+                </h4>
+            </mat-card-content>
+        </mat-card>
+        <!-- <div class="card">
+            <div class="card-body">
+                <h1>This is some text within a card body.</h1>
+                This is some text within a card body.
+            </div>
+        </div> -->
+    </div>
+</div>
