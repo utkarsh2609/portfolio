@@ -1,5 +1,5 @@
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostBinding, OnInit, Output } from '@angular/core';
 import { ThemeSwitchService } from '../services/theme-switch.service';
 import { Constants } from '../shared/constants';
 
@@ -9,7 +9,7 @@ import { Constants } from '../shared/constants';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+    @Output() toggleSideNav: EventEmitter<any> = new EventEmitter<any>();
     @HostBinding('class') componentCssClass: string = '';
     themes = Constants.themeNames;
     selectedTheme = this.themes[1].value;
@@ -37,6 +37,10 @@ export class HeaderComponent implements OnInit {
         }
         this.componentCssClass = theme;
         this.themeSwitchService.currentTheme.next(theme);
+    }
+
+    toggledSideNavigation() {
+        this.toggleSideNav.emit(true);
     }
 
 }

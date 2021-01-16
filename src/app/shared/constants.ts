@@ -7,6 +7,10 @@ export class Constants {
     public static themeImages = {
         BATMAN_HOME: '../assets/images/screen-images/homepage-batman.png',
         HARRY_HOME: '../assets/images/screen-images/homepage-harry.png',
+        BATMAN_ABOUT: '../assets/images/screen-images/about-batman.png',
+        HARRY_ABOUT: '../assets/images/screen-images/about-harry.png',
+        BATMAN_CONTACT: '../assets/images/screen-images/contact-batman.png',
+        HARRY_CONTACT: '../assets/images/screen-images/contact-harry.png',
     }
 
     public static homePageTitles = {

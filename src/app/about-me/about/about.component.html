@@ -1,1 +1,35 @@
-<p>about works!</p>
+<div class="row container-fluid d-flex align-items-center flex-wrap-reverse mt-2">
+    <div class="col-md-4">
+        <img [src]="homePagePicture" class="img-fluid about-img" alt="...">
+    </div>
+    <div class="col-md-8 mt-5">
+        <div [ngClass]="isCurrentThemeHarry ? 'harry-potter-title' : 'batman-title'">
+            <p class="h1">About Me</p>
+        </div>
+        <mat-card [ngClass]="isCurrentThemeHarry ? 'harry-potter-card' : 'batman-card'">
+            <mat-card-content>
+                <!-- <h4> -->
+                <h4>Hello! I'm Utkarsh, a software engineer based in India.</h4>
+                <p>
+                    A force that drives me to work better each day is the thought that software development gives me
+                    the
+                    power to <strong>create and build new things</strong>. Sounds God-like, doesn't it?
+                </p>
+                <p>
+                    Also creating a beautiful UI for users and seeing each pixel coming together to form something
+                    useful which would make someone's task easier is a great experience for me. These reasons make
+                    me
+                    believe in what I do and outperform myself each day.My strengths include being inquisitive, paying
+                    attention to detail, being a team player.
+                </p>
+                <p>Here are a few technologies I've been working with recently:</p>
+                <mat-chip-list>
+                    <mat-chip [ngClass]="isCurrentThemeHarry ? 'harry-potter-title' : 'batman-title'">HTML & (S)CSS</mat-chip>
+                    <mat-chip [ngClass]="isCurrentThemeHarry ? 'harry-potter-title' : 'batman-title'">Javascript</mat-chip>
+                    <mat-chip [ngClass]="isCurrentThemeHarry ? 'harry-potter-title' : 'batman-title'">Angular</mat-chip>
+                    <mat-chip [ngClass]="isCurrentThemeHarry ? 'harry-potter-title' : 'batman-title'">React</mat-chip>
+                </mat-chip-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
