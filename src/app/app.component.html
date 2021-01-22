@@ -2,20 +2,8 @@
     <mat-sidenav #sideNav mode="over">
         <mat-nav-list>
             <a mat-list-item routerLink="/about" (click)='sideNav.close()'>About</a>
-            <a mat-list-item routerLink="/prices" (click)='sideNav.close()'>Work</a>
+            <a mat-list-item routerLink="/work" (click)='sideNav.close()'>Work</a>
             <a mat-list-item routerLink="/contact" (click)='sideNav.close()'>Contact</a>
-            <!-- <mat-list-item>
-                <button mat-button (click)='select.open()'>
-                    <mat-select #select (selectionChange)="onSetTheme($event.value)" [(ngModel)]='selectedTheme' class="theme-selector">
-                        <mat-option *ngFor="let theme of themes" [value]="theme.value">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <img [src]="theme.image" alt="theme image" class="theme-image">
-                                {{theme.name}}
-                            </div>
-                        </mat-option>
-                    </mat-select>
-                </button>
-            </mat-list-item> -->
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

@@ -5,7 +5,7 @@
     <span routerLink="/">My Application</span>
     <div fxHide.xs fxFlex fxLayoutAlign='end'>
         <a mat-button routerLink="/about">About</a>
-        <a mat-button routerLink="/prices">Work</a>
+        <a mat-button routerLink="/work">Work</a>
         <a mat-button routerLink="/contact">Contact</a>
         <button mat-button (click)='select.open()'>
             <mat-select #select (selectionChange)="onSetTheme($event.value)" [(ngModel)]='selectedTheme' class="theme-selector">
