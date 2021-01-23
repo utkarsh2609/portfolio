@@ -126,11 +126,17 @@ body {
     
 }
 
+.clickable-icon {
+    cursor: pointer;
+}
+
 .harry-background {
     position: relative;
     display: flex;
     justify-content: center;
     height: 100vh;
+    font-weight: bold;
+
 
     &::before {
         content: "";
