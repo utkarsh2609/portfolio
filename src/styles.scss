@@ -35,26 +35,31 @@ $harry-potter-theme: mat-light-theme(
 
 @function my-mat-light-theme-foreground($color) {
     @return (
-        base:              $color,
-        divider:           $black-12-opacity,
-        dividers:          $black-12-opacity,
-        disabled:          rgba($color, 0.38),
-        disabled-button:   rgba($color, 0.38),
-        disabled-text:     rgba($color, 0.38),
-        hint-text:         rgba($color, 0.38),
-        secondary-text:    rgba($color, 0.54),
-        icon:              rgba($color, 0.54),
-        icons:             rgba($color, 0.54),
-        text:              rgba($color, 0.87),
-        slider-min:        rgba($color, 0.87),
-        slider-off:        rgba($color, 0.26),
-        slider-off-active: rgba($color, 0.38),
+        base: $color,
+        divider: $black-12-opacity,
+        dividers: $black-12-opacity,
+        disabled: rgba($color, 0.38),
+        disabled-button: rgba($color, 0.38),
+        disabled-text: rgba($color, 0.38),
+        hint-text: rgba($color, 0.38),
+        secondary-text: rgba($color, 0.54),
+        icon: rgba($color, 0.54),
+        icons: rgba($color, 0.54),
+        text: rgba($color, 0.87),
+        slider-min: rgba($color, 0.87),
+        slider-off: rgba($color, 0.26),
+        slider-off-active: rgba($color, 0.38)
     );
-};
+}
 
 // You can put any color here. I've chosen mat-color($my-app-primary, 700)
 $my-foreground: my-mat-light-theme-foreground(mat-color($mat-red, 700));
-$my-app-theme-custom: map-merge($harry-potter-theme, (foreground: $my-foreground));
+$my-app-theme-custom: map-merge(
+    $harry-potter-theme,
+    (
+        foreground: $my-foreground,
+    )
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -123,7 +128,6 @@ body {
 *:focus,
 *:active {
     outline: none !important;
-    
 }
 
 .clickable-icon {
@@ -137,7 +141,6 @@ body {
     height: 100vh;
     font-weight: bold;
 
-
     &::before {
         content: "";
         position: absolute;
@@ -145,16 +148,39 @@ body {
         right: 0px;
         bottom: 0px;
         left: 0px;
-        background: url("./assets/backgrounds/home-harry.jpg");
+        // background: url("./assets/backgrounds/home-harry.jpg");
+        // background: url("https://my.wizardingworld.com/static/media/bg.d26c2b3f.jpg");
+        background: url("https://i.pinimg.com/564x/63/a7/3f/63a73f5c7bc5e831dbf6adbbfa4ac61d.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        opacity: 0.7;
+        // opacity: 0.7;
     }
 }
 
 .batman-background {
     background-image: linear-gradient(to right, #03080d, #0a141b, #0c1c27, #092533, #012e40);
+    // position: relative;
+    // display: flex;
+    // justify-content: center;
+    // height: 100vh;
+    // font-weight: bold;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0px;
+    //     right: 0px;
+    //     bottom: 0px;
+    //     left: 0px;
+    //     // background: url("./assets/backgrounds/home-harry.jpg");
+    //     // background: url("https://my.wizardingworld.com/static/media/bg.d26c2b3f.jpg");
+    //     background: url("https://images.unsplash.com/photo-1610567776190-c8d9af51639b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=625&q=80");
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     // opacity: 0.7;
+    // }
 }
 
 .harry-potter-card {

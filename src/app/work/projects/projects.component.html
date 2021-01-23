@@ -44,7 +44,7 @@
             <p class="h1 mb-0">Other Projects</p>
         </div>
     </div>
-    <div class="row mt-5 no-padding">
+    <div class="row mt-5 no-padding d-flex justify-content-center">
         <div class="col-sm-4 other-project-card" [ngClass]="isCurrentThemeHarry ? 'harry-potter-title' : 'batman-title'"
             *ngFor='let key of objectKeys(otherProjects)'>
             <span class="other-project-title">{{key}}</span>
