@@ -1,5 +1,5 @@
 <mat-sidenav-container class="example-container">
-    <mat-sidenav #sideNav mode="over">
+    <mat-sidenav [ngClass]="isCurrentThemeHarry ? 'harry-potter-navigation' : 'batman-navigation'" #sideNav mode="over">
         <mat-nav-list>
             <a mat-list-item routerLink="/about" (click)='sideNav.close()'>About</a>
             <a mat-list-item routerLink="/work" (click)='sideNav.close()'>Work</a>

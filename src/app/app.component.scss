@@ -4,14 +4,10 @@ mat-sidenav-container, mat-sidenav, mat-sidenav-content {
 
 mat-sidenav {
     width: 250px;
-    // background-color: aliceblue;
 }
 
 main {
-    // overflow: hidden;
-    // background: url('../assets/backgrounds/home-harry.jpg');
-    // height: 100vh;
-    // width: 100vw;
+    margin-top: 8rem;
 }
 
 @media screen and (max-width: 600px) {

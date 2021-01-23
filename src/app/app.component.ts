@@ -12,8 +12,8 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 })
 export class AppComponent implements OnInit {
     @HostBinding('class') componentCssClass: string = '';
-    // title = 'portfolio';
-    // themes = Constants.themeNames;
+    isCurrentThemeHarry = false;
+
 
     constructor(
         @Inject(DOCUMENT) private document: any,
@@ -23,14 +23,12 @@ export class AppComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        // this.renderer.addClass('body', 'harry-background');
-        // this.updateBodyClass('harry-background');
         this.themeSwitchService.currentTheme.subscribe(theme => {
             const currentBodyClass = Constants.themeNames.find(themeItem => themeItem.value === theme)?.bodyClass;
             console.log('current', theme, currentBodyClass);
+            this.isCurrentThemeHarry = theme === Constants.themeNames[1].value;
             this.updateBodyClass(currentBodyClass);
         })
-        // this.themeSwitchService.updateBodyClass('harry-background');
     }
 
     private updateBodyClass(customBodyClass?: string) {
@@ -39,20 +37,4 @@ export class AppComponent implements OnInit {
             this.renderer.addClass(this.document?.body, customBodyClass);
         }
     }
-
-    // onSetTheme(theme: string) {
-    //     console.log('themeUP', theme)
-    //     const classListLength = this.overlayContainer.getContainerElement().classList.length;
-    //     if(classListLength === 2 ) {
-    //         this.overlayContainer.getContainerElement().classList.contains(this.themes[0].value) ?
-    //         this.overlayContainer.getContainerElement().classList.replace(this.themes[0].value, this.themes[1].value) :
-    //         this.overlayContainer.getContainerElement().classList.replace(this.themes[1].value, this.themes[0].value)
-
-    //         // this.themeSwitchService.updateBodyClass('batman-background');
-    //     } else {
-    //         this.overlayContainer.getContainerElement().classList.add(theme);
-    //     }
-    //     this.componentCssClass = theme;
-    //     this.themeSwitchService.currentTheme.next(theme);
-    // }
 }

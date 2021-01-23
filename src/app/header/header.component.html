@@ -1,8 +1,8 @@
-<mat-toolbar color='primary' class="portfolio-header">
+<mat-toolbar class="portfolio-header" [ngClass]="isCurrentThemeHarry ? 'harry-potter-navigation' : 'batman-navigation'">
     <button mat-button (click)='toggledSideNavigation()' fxHide.gt-xs>
         <mat-icon>menu</mat-icon>
     </button>
-    <span routerLink="/">My Application</span>
+    <span routerLink="/">Utkarsh Awasthi</span>
     <div fxHide.xs fxFlex fxLayoutAlign='end'>
         <a mat-button routerLink="/about">About</a>
         <a mat-button routerLink="/work">Work</a>

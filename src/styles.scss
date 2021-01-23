@@ -15,7 +15,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$harry-potter-primary: mat-palette($md-hpprimary, 100, 300, 700);
+$harry-potter-primary: mat-palette($md-hpprimary, 500, 300, 700);
 $harry-potter-accent: mat-palette($md-hpsecond, 500, 300, 700);
 
 // The warn palette is optional (defaults to red).
@@ -32,14 +32,36 @@ $harry-potter-theme: mat-light-theme(
         ),
     )
 );
-// $harry-potter-theme: create-wonky-theme($harry-potter-primary, $harry-potter-accent, $harry-potter-warn);
+
+@function my-mat-light-theme-foreground($color) {
+    @return (
+        base:              $color,
+        divider:           $black-12-opacity,
+        dividers:          $black-12-opacity,
+        disabled:          rgba($color, 0.38),
+        disabled-button:   rgba($color, 0.38),
+        disabled-text:     rgba($color, 0.38),
+        hint-text:         rgba($color, 0.38),
+        secondary-text:    rgba($color, 0.54),
+        icon:              rgba($color, 0.54),
+        icons:             rgba($color, 0.54),
+        text:              rgba($color, 0.87),
+        slider-min:        rgba($color, 0.87),
+        slider-off:        rgba($color, 0.26),
+        slider-off-active: rgba($color, 0.38),
+    );
+};
+
+// You can put any color here. I've chosen mat-color($my-app-primary, 700)
+$my-foreground: my-mat-light-theme-foreground(mat-color($mat-red, 700));
+$my-app-theme-custom: map-merge($harry-potter-theme, (foreground: $my-foreground));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 .harry-potter-theme {
-    @include angular-material-theme($harry-potter-theme);
-    // color: mat-color($md-hpsecond, A100);
+    // @include angular-material-theme($harry-potter-theme);
+    @include angular-material-theme($my-app-theme-custom);
 }
 
 // typography
@@ -100,18 +122,14 @@ body {
 
 *:focus,
 *:active {
-    outline: none;
+    outline: none !important;
+    
 }
 
 .harry-background {
-    // background: url("./assets/backgrounds/home-harry.jpg");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
-    // align-items: center;
     height: 100vh;
 
     &::before {
@@ -130,10 +148,6 @@ body {
 }
 
 .batman-background {
-    // background: url("./assets/backgrounds/home-bat.jpg");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     background-image: linear-gradient(to right, #03080d, #0a141b, #0c1c27, #092533, #012e40);
 }
 
@@ -157,4 +171,14 @@ body {
     background-color: #03080d;
     color: #025e73;
     font-weight: 800;
+}
+
+.harry-potter-navigation {
+    background: #ae0001 !important;
+    color: #eeba30 !important;
+}
+
+.batman-navigation {
+    background: #012e4070 !important;
+    color: #04b2d9 !important;
 }

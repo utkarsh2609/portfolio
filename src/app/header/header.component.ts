@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
     @HostBinding('class') componentCssClass: string = '';
     themes = Constants.themeNames;
     selectedTheme = this.themes[1].value;
+    isCurrentThemeHarry = false;
 
     constructor(
         public overlayContainer: OverlayContainer,
@@ -37,6 +38,7 @@ export class HeaderComponent implements OnInit {
         }
         this.componentCssClass = theme;
         this.themeSwitchService.currentTheme.next(theme);
+        this.isCurrentThemeHarry = theme === Constants.themeNames[1].value;
     }
 
     toggledSideNavigation() {
