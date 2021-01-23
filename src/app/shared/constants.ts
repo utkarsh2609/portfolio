@@ -22,4 +22,17 @@ export class Constants {
         BATMAN_BODY: 'Don’t let the muggles get you down.',
         HARRY_BODY: "I am not just a UI developer. I'm a wizard who brings magic to your application's front end.",
     };
+
+    public static profileUrls = {
+        GITHUB_URL: 'https://github.com/utkarsh2609',
+        LINKED_IN_URL: 'https://www.linkedin.com/in/utkarsh-awasthi-96b147173',
+        G_MAIL_URL: 'mailto:utkarsh.awasthi01@gmail.com'
+    }
+
+    public static routings = {
+        HOME_PAGE: '',
+        WORK: 'work',
+        CONTACT: 'contact',
+        ABOUT: 'about'
+    }
 };

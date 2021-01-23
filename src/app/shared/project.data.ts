@@ -1,5 +1,5 @@
 export const Projects = {
-    'Qoute Generator': {
+    'Quote Generator': {
         url: 'https://utkarsh2609.github.io/quote-generator/',
         github: 'https://github.com/utkarsh2609/quote-generator/tree/master',
         image: '../assets/portfolio_ss/quote_generator.png',
@@ -44,7 +44,7 @@ export const Projects = {
     'Spock Rock Game': {
         url: 'https://utkarsh2609.github.io/spock-rock-game/',
         github: 'https://github.com/utkarsh2609/spock-rock-game',
-        image: '../assets/portfolio_ss/enkel_connect.png',
+        image: '../assets/portfolio_ss/spock_rock.png',
         isMobile: false
     },
     'Form Validator': {
@@ -56,7 +56,7 @@ export const Projects = {
     'Video Player': {
         url: 'https://utkarsh2609.github.io/video-player/',
         github: 'https://github.com/utkarsh2609/video-player',
-        image: '../assets/portfolio_ss/video_player.png',
+        image: '../assets/portfolio_ss/video_player.gif',
         isMobile: false
     },
     'Bookmark': {
@@ -77,12 +77,12 @@ export const Projects = {
         image: '../assets/portfolio_ss/music_player.png',
         isMobile: true
     },
-    'Animated Template': {
-        url: 'https://utkarsh2609.github.io/animated-template/',
-        github: 'https://github.com/utkarsh2609/animated-template',
-        image: '../assets/portfolio_ss/joke_teller.png',
-        isMobile: false
-    },
+    // 'Animated Template': {
+    //     url: 'https://utkarsh2609.github.io/animated-template/',
+    //     github: 'https://github.com/utkarsh2609/animated-template',
+    //     image: '../assets/portfolio_ss/joke_teller.png',
+    //     isMobile: false
+    // },
     'Joke Teller': {
         url: 'https://utkarsh2609.github.io/joke-teller/',
         github: 'https://github.com/utkarsh2609/joke-teller',

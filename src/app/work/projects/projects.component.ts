@@ -9,9 +9,7 @@ import { FeaturedProjects, Projects } from 'src/app/shared/project.data';
     styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-    homePagePicture = Constants.themeImages.HARRY_HOME;
-    homePageTitle = Constants.homePageTitles.HARRY_TITLE;
-    homePageBody = Constants.homePageBody.HARRY_BODY;
+    objectKeys = Object.keys;
     isCurrentThemeHarry = false;
     featuredProjects: any;
     otherProjects: any;
@@ -32,6 +30,10 @@ export class ProjectsComponent implements OnInit {
         this.featuredProjects = FeaturedProjects;
         this.otherProjects = Projects;
         console.log('FEATURING', this.otherProjects)
+    }
+
+    openApplication(url: string) {
+        window.open(url, '_blank');
     }
 
     // setContentofHomePage(isCurrentThemeHarryPotter: boolean) {

@@ -9,8 +9,9 @@ import { Constants } from 'src/app/shared/constants';
 })
 export class ContactComponent implements OnInit {
     homePagePicture = Constants.themeImages.HARRY_CONTACT;
-    homePageTitle = Constants.homePageTitles.HARRY_TITLE;
-    homePageBody = Constants.homePageBody.HARRY_BODY;
+    githubUrl = Constants.profileUrls.GITHUB_URL;
+    linkedInUrl = Constants.profileUrls.LINKED_IN_URL;
+    gmailUrl = Constants.profileUrls.G_MAIL_URL;
     isCurrentThemeHarry = false;
 
     constructor(
@@ -20,13 +21,14 @@ export class ContactComponent implements OnInit {
     ngOnInit(): void {
         this.themeSwitchService.currentTheme.subscribe(theme => {
             this.isCurrentThemeHarry = theme === Constants.themeNames[1].value;
-            this.setContentofHomePage(this.isCurrentThemeHarry);
         })
     }
 
-    setContentofHomePage(isCurrentThemeHarryPotter: boolean) {
-        this.homePagePicture = isCurrentThemeHarryPotter ? Constants.themeImages.HARRY_CONTACT : Constants.themeImages.BATMAN_CONTACT;
-        this.homePageTitle = isCurrentThemeHarryPotter ? Constants.homePageTitles.HARRY_TITLE : Constants.homePageTitles.BATMAN_TITLE;
-        this.homePageBody = isCurrentThemeHarryPotter ? Constants.homePageBody.HARRY_BODY : Constants.homePageBody.BATMAN_BODY;
+    openUrl(url: string) {
+        if (url === this.gmailUrl) {
+            window.location.href = url;
+            return;
+        }
+        window.open(url, '_blank');
     }
 }
