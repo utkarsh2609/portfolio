@@ -21,7 +21,12 @@ export class ContactComponent implements OnInit {
     ngOnInit(): void {
         this.themeSwitchService.currentTheme.subscribe(theme => {
             this.isCurrentThemeHarry = theme === Constants.themeNames[1].value;
+            this.setContentofHomePage(this.isCurrentThemeHarry);
         })
+    }
+
+    setContentofHomePage(isCurrentThemeHarryPotter: boolean) {
+        this.homePagePicture = isCurrentThemeHarryPotter ? Constants.themeImages.HARRY_CONTACT : Constants.themeImages.BATMAN_CONTACT;
     }
 
     openUrl(url: string) {

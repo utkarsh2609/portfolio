@@ -19,7 +19,7 @@ export class Constants {
     };
 
     public static homePageBody = {
-        BATMAN_BODY: 'Don’t let the muggles get you down.',
+        BATMAN_BODY: 'I am the knight who improves performance of your application in the browser',
         HARRY_BODY: "I am not just a UI developer. I'm a wizard who brings magic to your application's front end.",
     };
 
