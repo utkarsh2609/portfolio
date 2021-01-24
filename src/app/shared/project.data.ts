@@ -1,4 +1,34 @@
 export const Projects = {
+    'Crwn App': {
+        url: 'https://crwn-ut01.herokuapp.com/shop',
+        github: 'https://github.com/utkarsh2609/crwn-app-react',
+        image: '../assets/portfolio_ss/crwn.png',
+        isMobile: false
+    },
+    'Monster Rolodex': {
+        url: 'https://utkarsh2609.github.io/monsters-rolodex/',
+        github: 'https://github.com/utkarsh2609/monsters-rolodex',
+        image: '../assets/portfolio_ss/monster_rolodex.png',
+        isMobile: false
+    },
+    'Joke Teller': {
+        url: 'https://utkarsh2609.github.io/joke-teller/',
+        github: 'https://github.com/utkarsh2609/joke-teller',
+        image: '../assets/portfolio_ss/joke_teller.png',
+        isMobile: false
+    },
+    'Paint Clone': {
+        url: 'https://utkarsh2609.github.io/paint-clone/',
+        github: 'https://github.com/utkarsh2609/paint-clone',
+        image: '../assets/portfolio_ss/paint_clone.png',
+        isMobile: false
+    },
+    'Drag Drop': {
+        url: 'https://utkarsh2609.github.io/drag-drop/',
+        github: 'https://github.com/utkarsh2609/drag-drop',
+        image: '../assets/portfolio_ss/drag_drop.png',
+        isMobile: false
+    },
     'Quote Generator': {
         url: 'https://utkarsh2609.github.io/quote-generator/',
         github: 'https://github.com/utkarsh2609/quote-generator/tree/master',
@@ -11,12 +41,6 @@ export const Projects = {
         image: '../assets/portfolio_ss/ping_pong.png',
         isMobile: false
     },
-    'Paint Clone': {
-        url: 'https://utkarsh2609.github.io/paint-clone/',
-        github: 'https://github.com/utkarsh2609/paint-clone',
-        image: '../assets/portfolio_ss/paint_clone.png',
-        isMobile: false
-    },
     'Splash Page': {
         url: 'https://utkarsh2609.github.io/splash-page/',
         github: 'https://github.com/utkarsh2609/splash-page',
@@ -27,12 +51,6 @@ export const Projects = {
         url: 'https://utkarsh2609.github.io/basic-calculator/',
         github: 'https://github.com/utkarsh2609/basic-calculator',
         image: '../assets/portfolio_ss/calculator.png',
-        isMobile: false
-    },
-    'Drag Drop': {
-        url: 'https://utkarsh2609.github.io/drag-drop/',
-        github: 'https://github.com/utkarsh2609/drag-drop',
-        image: '../assets/portfolio_ss/drag_drop.png',
         isMobile: false
     },
     'NASA POD': {
@@ -77,35 +95,11 @@ export const Projects = {
         image: '../assets/portfolio_ss/music_player.png',
         isMobile: true
     },
-    // 'Animated Template': {
-    //     url: 'https://utkarsh2609.github.io/animated-template/',
-    //     github: 'https://github.com/utkarsh2609/animated-template',
-    //     image: '../assets/portfolio_ss/joke_teller.png',
-    //     isMobile: false
-    // },
-    'Joke Teller': {
-        url: 'https://utkarsh2609.github.io/joke-teller/',
-        github: 'https://github.com/utkarsh2609/joke-teller',
-        image: '../assets/portfolio_ss/joke_teller.png',
-        isMobile: false
-    },
     'Infinty Scroll': {
         url: 'https://utkarsh2609.github.io/infinity-scroll/',
         github: 'https://github.com/utkarsh2609/infinity-scroll',
         image: '../assets/portfolio_ss/infinte_scroll.png',
         isMobile: true
-    },
-    'Crwn App': {
-        url: 'https://crwn-ut01.herokuapp.com/shop',
-        github: 'https://github.com/utkarsh2609/crwn-app-react',
-        image: '../assets/portfolio_ss/crwn.png',
-        isMobile: false
-    },
-    'Monster Rolodex': {
-        url: 'https://utkarsh2609.github.io/monsters-rolodex/',
-        github: 'https://github.com/utkarsh2609/monsters-rolodex',
-        image: '../assets/portfolio_ss/monster_rolodex.png',
-        isMobile: false
     }
 }
 
