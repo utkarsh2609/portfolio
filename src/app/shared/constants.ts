@@ -25,7 +25,7 @@ export class Constants {
 
     public static profileUrls = {
         GITHUB_URL: 'https://github.com/utkarsh2609',
-        LINKED_IN_URL: 'https://www.linkedin.com/in/utkarsh-awasthi-96b147173',
+        LINKED_IN_URL: 'https://www.linkedin.com/in/utkarsh-awasthi-2609',
         G_MAIL_URL: 'mailto:utkarsh.awasthi01@gmail.com'
     }
 
